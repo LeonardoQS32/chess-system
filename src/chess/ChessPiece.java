@@ -13,7 +13,11 @@ public abstract class ChessPiece extends Piece {
     }
 
     public Color getColor() {
-        return color;
+        return this.color;
+    }
+
+    public ChessPosition getChessPosition () {
+        return ChessPosition.fromPosition(this.position);
     }
 
     protected boolean isThereOponentPiece (Position position) {
